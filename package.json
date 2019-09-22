@@ -1,24 +1,28 @@
 {
-  "name": "task2",
-  "version": "1.0.0",
-  "main": "linter.js",
-  "scripts": {
-    "start": "gulp"
-  },
-  "author": "ab",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
-    "browser-sync": "^2.26.7",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-sass": "^4.0.1"
-  },
-  "dependencies": {
-    "gulp-browserify": "^0.5.1",
-    "json-to-ast": "^2.1.0"
-  },
-  "description": ""
+    "name": "myarcanum",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "./node_modules/.bin/gulp"
+    },
+    "author": "abylkov",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "csscomb": "^4.3.0",
+        "express": "^4.17.1",
+        "gulp-sass": "^4.0.2",
+        "request": "^2.88.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.4.3",
+        "@babel/preset-env": "^7.4.3",
+        "browser-sync": "^2.26.3",
+        "gulp": "^4.0.0",
+        "gulp-autoprefixer": "^6.0.0",
+        "gulp-babel": "^8.0.0",
+        "gulp-csscomb": "^3.0.8",
+        "gulp-less": "^4.0.1"
+    }
 }

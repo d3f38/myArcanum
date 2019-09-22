@@ -13,6 +13,4 @@ const presets = [
   ],
 ];
 
-// const plugins =  ["syntax-async-functions", "transform-regenerator", "es6-promise"];
-
 module.exports = { presets};

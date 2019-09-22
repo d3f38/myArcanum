@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <link rel="stylesheet" type="text/css" href="sass/style.css">
+    <meta http-equiv=" X-UA-Compatible " content="ie=edge ">
+    <title>Document</title>
+</head>
+
+<body class="theme-repository ">
+    <div class="header padding_default ">
+        <div class="logo logo_margin_desktop ">
+            <img class="logo__image " src="./../images/Logotype.svg " alt="logotype ">
+        </div>
+        <div class="choice-repository ">
+            <div class="current-repository ">
+                <span class="current-repository__title ">
+                    Repository
+                </span>
+                <span class="current-repository__name ">
+                    Arc
+                </span>
+            </div>
+
+            <!-- <span class="icon icon_arrow icon_margin_left icon_arrow_up "></span> -->
+            <svg class="icon-arrow icon_margin_left " width="10 " height="6 " viewBox="0 0 10 6 " fill="none " xmlns="http://www.w3.org/2000/svg ">
+                <path d="M4.77148 5.46094C4.89844 5.58789 5.07617 5.58789 5.20312 5.46094L8.96094 1.72852C9.08789 1.62695 9.08789 1.42383 8.96094 1.29688L8.45312 0.814453C8.35156 0.6875 8.14844 0.6875 8.02148 0.814453L5 3.81055L1.95312 0.814453C1.82617
+        0.6875 1.64844 0.6875 1.52148 0.814453L1.01367 1.29688C0.886719 1.42383 0.886719 1.62695 1.01367 1.72852L4.77148 5.46094Z " fill="black "/>
+            </svg>
+
+            <ul class="repository-list ">
+                <li class="repository-list__repository-name ">Arc</li>
+                <li class="repository-list__repository-name ">My repository</li>
+                <li class="repository-list__repository-name ">Devtools-team repository</li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-content ">
+        <div class="directory-info directory-info_theme_commit">
+            <div class="directory-info__header">
+                <div class="directory-name">
+                    <span class="directory-name__main ">DEVTOOLS-4599: Add option to add extra whitespace between projects</span>
+                </div>
+                <p class="directory-last-commit "><span class="directory-last-commit__hash ">r3248813</span> on <span class="directory-last-commit__date "></span> by <span class="directory-last-commit__committer "><span>robot-srch-releaser</span></span>
+                </p>
+            </div>
+            <div class="directory-info__show-file-button">
+                <span class="icon icon_lines icon_margin_right "></span>Show files at r4318347
+            </div>
+        </div>
+        <div class="markdown ">
+            <div class="markdown__header">
+                <div class="markdown__title ">
+                    <span class="markdown__letter markdown__letter_M">M</span>
+                    <span class="icon icon_script_grey icon_margin_right "></span>
+                    <span class="markdown__path">/trunk/arcadia/devtools/intellij/src/main/java/ru/yandex/devtools/intellij/arc/client/ArcCli.java</span>
+                </div>
+                <div class="markdown__diff-value">
+                    <span class="markdown__value markdown__value_plus">+100</span>
+                    <span class="markdown__value markdown__value_minus">-81</span>
+                    <span class="icon icon_clone"></span>
+                </div>
+            </div>
+
+            <div class="markdown__content ">
+                <table class="diff-line">
+                    <tbody>
+                        <tr>
+                            <div class="diff-line__hunk">@@ -270, 160 +270, 161 @@</div>
+                            <div class="diff-line__lines">▼ Below 20 lines <span class="diff-line__lines_active">▲ Above 20 lines</span></div>
+                        </tr>
+                        <tr>
+                            <td class="diff-line__number diff-line__number_first">1</td>
+                            <td class="diff-line__number diff-line__number_second">1</td>
+                            <td class="diff-line__code">package ru.yandex.devtools.intellij.arc.client;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-line__number diff-line__number_first">2</td>
+                            <td class="diff-line__number diff-line__number_second">2</td>
+                            <td class="diff-line__code"></td>
+                        </tr>
+                        <tr class="line line_added">
+                            <td class="diff-line__number diff-line__number_first"></td>
+                            <td class="diff-line__number diff-line__number_second">3</td>
+                            <td class="diff-line__code">import java.util.ArrayList;</td>
+                        </tr>
+                        <tr class="line line_added">
+                            <td class="diff-line__number diff-line__number_first"></td>
+                            <td class="diff-line__number diff-line__number_second">4</td>
+                            <td class="diff-line__code">import java.util.Collection;</td>
+                        </tr>
+                        <tr class="line line_added">
+                            <td class="diff-line__number diff-line__number_first"></td>
+                            <td class="diff-line__number diff-line__number_second">5</td>
+                            <td class="diff-line__code">import java.util.List;</td>
+                        </tr>
+                        <tr class="line line_added">
+                            <td class="diff-line__number diff-line__number_first"></td>
+                            <td class="diff-line__number diff-line__number_second">6</td>
+                            <td class="diff-line__code">import java.util.List;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-line__number diff-line__number_first">3</td>
+                            <td class="diff-line__number diff-line__number_second">7</td>
+                            <td class="diff-line__code">import com.intellij.openapi.diagnostic.Logger;</td>
+                        </tr>
+                        <tr class="line line_added">
+                            <td class="diff-line__number diff-line__number_first"></td>
+                            <td class="diff-line__number diff-line__number_second">8</td>
+                            <td class="diff-line__code">import com.intellij.openapi.project.Project;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-line__number diff-line__number_first">4</td>
+                            <td class="diff-line__number diff-line__number_second">9</td>
+                            <td class="diff-line__code">import com.intellij.openapi.project.Project;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-line__number diff-line__number_first">5</td>
+                            <td class="diff-line__number diff-line__number_second">10</td>
+                            <td class="diff-line__code">import com.intellij.openapi.project.Project;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-line__number diff-line__number_first">6</td>
+                            <td class="diff-line__number diff-line__number_second">11</td>
+                            <td class="diff-line__code">import com.intellij.openapi.project.Project;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-line__number diff-line__number_first">7</td>
+                            <td class="diff-line__number diff-line__number_second">12</td>
+                            <td class="diff-line__code">import com.intellij.openapi.project.Project;</td>
+                        </tr>
+                        <tr class="line line_added">
+                            <td class="diff-line__number diff-line__number_first"></td>
+                            <td class="diff-line__number diff-line__number_second">13</td>
+                            <td class="diff-line__code">import org.jetbrains.annotations.NotNull;</td>
+                        </tr>
+                        <tr class="line line_added">
+                            <td class="diff-line__number diff-line__number_first"></td>
+                            <td class="diff-line__number diff-line__number_second">14</td>
+                            <td class="diff-line__code"></td>
+                        </tr>
+                        <tr>
+                            <td class="diff-line__number diff-line__number_first">8</td>
+                            <td class="diff-line__number diff-line__number_second">15</td>
+                            <td class="diff-line__code">import ru.yandex.devtools.intellij.arc.ArcContext;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-line__number diff-line__number_first">9</td>
+                            <td class="diff-line__number diff-line__number_second">16</td>
+                            <td class="diff-line__code">import ru.yandex.devtools.intellij.arc.ArcRevisionNumber;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-line__number diff-line__number_first">10</td>
+                            <td class="diff-line__number diff-line__number_second">17</td>
+                            <td class="diff-line__code">import ru.yandex.devtools.intellij.arc.ArcStatus;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-line__number diff-line__number_first">11</td>
+                            <td class="diff-line__number diff-line__number_second">18</td>
+                            <td class="diff-line__code"></td>
+                        </tr>
+                        <tr class="line line_removed">
+                            <td class="diff-line__number diff-line__number_first">12</td>
+                            <td class="diff-line__number diff-line__number_second"></td>
+                            <td class="diff-line__code">import java.util.ArrayList;</td>
+                        </tr>
+                        <tr class="line line_removed">
+                            <td class="diff-line__number diff-line__number_first">13</td>
+                            <td class="diff-line__number diff-line__number_second"></td>
+                            <td class="diff-line__code">import java.util.Collection;</td>
+                        </tr>
+                        <tr class="line line_removed">
+                            <td class="diff-line__number diff-line__number_first">14</td>
+                            <td class="diff-line__number diff-line__number_second"></td>
+                            <td class="diff-line__code">import java.util.List;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-line__number diff-line__number_first">16</td>
+                            <td class="diff-line__number diff-line__number_second">20</td>
+                            <td class="diff-line__code">/**</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-line__number diff-line__number_first">17</td>
+                            <td class="diff-line__number diff-line__number_second">21</td>
+                            <td class="diff-line__code">&ensp;* @author Dmitry Andreev &lt;a href="mailto:AndreevDm@yandex-team.ru"&gt;&lt;/a&gt;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-line__number diff-line__number_first"></td>
+                            <td class="diff-line__number diff-line__number_second">22</td>
+                            <td class="diff-line__code">&ensp;* @date 11/10/2018</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-line__number diff-line__number_first">16</td>
+                            <td class="diff-line__number diff-line__number_second">20</td>
+                            <td class="diff-line__code">*/</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-line__number diff-line__number_first">19</td>
+                            <td class="diff-line__number diff-line__number_second">24</td>
+                            <td class="diff-line__code">&nbsp;&nbsp;&nbsp;&nbsp;public ArcCli(String arcBinaryPath) {</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-line__number diff-line__number_first">20</td>
+                            <td class="diff-line__number diff-line__number_second">25</td>
+                            <td class="diff-line__code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.arcBinaryPath = arcBinaryPath;</td>
+                        </tr>
+                        <tr>
+                            <td class="diff-line__number diff-line__number_first">21</td>
+                            <td class="diff-line__number diff-line__number_second">26</td>
+                            <td class="diff-line__code">&nbsp;&nbsp;&nbsp;&nbsp;}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="footer ">
+        <span class="footer__contacts ">Trade secrets of Yandex LLC. 16, Lev Tolstoy Str., Moscow, Russia, 119021</span>
+        <span class="footer__data ">
+            <span class="footer__ui-version ">UI: 0.1.15</span>
+        <span class="footer__copyright ">© 2007—2019 <a href="https://yandex.ru " class="footer__link ">Yandex</a></span>
+        </span>
+
+    </div>
+</body>
+
+</html>

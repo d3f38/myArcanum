@@ -1,0 +1,945 @@
+.theme-repository
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+
+    margin: 0;
+}
+
+.header
+{
+    display: flex;
+
+    height: 55px;
+    padding: 0 32px; 
+
+    border-bottom: 1px solid #f0f2f3;
+
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main-content
+{
+    padding: 0 32px;
+}
+
+.icon
+{
+    display: inline-block;
+
+    width: 12px;
+    height: 12px;
+
+    transition: .3s; 
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.icon_margin_left
+{
+    margin-left: 5px;
+}
+.icon_margin_right
+{
+    margin-right: 10px;
+}
+.icon_margin_top
+{
+    margin-top: 3px;
+}
+.icon_arrow
+{
+    background-image: url(./../../images/arrow.svg);
+}
+.icon_arrow_up
+{
+    transform: rotate(180deg);
+}
+.icon_markdown
+{
+    background-image: url(./../../images/icon-markdown.svg);
+}
+.icon_script
+{
+    background-image: url(./../../images/icon-script.svg);
+}
+.icon_script_grey
+{
+    background-image: url(./../../images/icon-script-grey.svg);
+}
+.icon_folder
+{
+    background-image: url(./../../images/icon-folder.svg);
+}
+.icon_save-button
+{
+    background-image: url(./../../images/icon-save-button.svg);
+}
+.icon_clone
+{
+    background-image: url(./../../images/icon-clone.svg);
+}
+.icon_lines
+{
+    background-image: url(./../../images/icon-lines.svg);
+}
+.icon_branch
+{
+    background-image: url(./../../images/icon-branch.svg);
+}
+
+.logo_margin_desktop
+{
+    margin-right: 40px;
+}
+
+.choice-repository
+{
+    font-size: 14px;
+    line-height: 18px;
+
+    position: relative;
+
+    display: flex;
+
+    box-sizing: border-box;
+    height: 56px;
+
+    cursor: pointer; 
+
+    color: #000;
+
+    align-items: center;
+    justify-content: center;
+}
+.choice-repository:hover .repository-list
+{
+    display: block;
+}
+
+.current-repository
+{
+    display: flex;
+
+    height: 53px;
+
+    border-bottom: 3px solid #ff4f49; 
+
+    align-items: center;
+}
+.current-repository__title
+{
+    font-weight: bold;
+
+    margin-right: 3px;
+}
+
+.repository-list
+{
+    position: absolute;
+    z-index: 10;
+    top: 56px;
+    left: 0;
+
+    display: none;
+
+    box-sizing: border-box; 
+    width: 266px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(53, 73, 93, .2);
+}
+.repository-list__repository-name
+{
+    font-size: 14px;
+    line-height: 20px; 
+
+    padding: 8px 22px;
+}
+.repository-list__repository-name:hover
+{
+    background: #f4f5f6;
+}
+.repository-list__repository-name:first-child
+{
+    padding-top: 14px;
+}
+.repository-list__repository-name:last-child
+{
+    padding-bottom: 18px;
+}
+
+.breadcrumbs
+{
+    font-size: 14px;
+    line-height: 20px; 
+
+    display: flex;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    align-items: center;
+}
+.breadcrumbs__link
+{
+    text-decoration: none; 
+
+    color: #7f8285;
+}
+.breadcrumbs__link:hover
+{
+    color: #000;
+}
+.breadcrumbs__link::after
+{
+    margin: 0 20px; 
+
+    content: '/';
+}
+.breadcrumbs__link:last-child
+{
+    font-weight: bold; 
+
+    color: #000;
+}
+.breadcrumbs__link:last-child::after
+{
+    content: none;
+}
+
+.directory-info__show-file-button
+{
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 15px; 
+
+    display: flex;
+
+    height: 28px;
+    padding: 0 12px;
+
+    border-radius: 4px;
+    background: #e6e6e6;
+
+    align-items: center;
+}
+
+.directory-info_theme_commit
+{
+    display: flex;
+
+    margin-top: 15px; 
+
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.directory-info_theme_commit .directory-name
+{
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.directory-info_theme_commit .directory-last-commit
+{
+    margin-top: 0;
+}
+
+.directory-name
+{
+    font-size: 24px;
+    line-height: 28px;
+
+    position: relative; 
+
+    display: flex;
+
+    margin: 15px 0;
+}
+.directory-name_theme_commit
+{
+    margin: 0;
+}
+.directory-name__main
+{
+    font-weight: bold;
+
+    margin-right: 5px;
+}
+.directory-name__branch
+{
+    position: relative;
+
+    cursor: pointer; 
+
+    color: #7f8285;
+}
+.directory-name__branch:hover .select-branch
+{
+    display: flex; 
+
+    cursor: pointer;
+}
+.directory-name__branch-name
+{
+    display: flex;
+
+    align-items: center;
+}
+
+.directory-last-commit
+{
+    font-size: 14px;
+    line-height: 20px;
+
+    margin: 10px 0;
+}
+.directory-last-commit__hash,
+.directory-last-commit__date
+{
+    color: #1774e9;
+}
+.directory-last-commit__committer span::first-letter
+{
+    color: red;
+}
+
+.directory-content-tabs
+{
+    box-sizing: border-box; 
+    height: 40px;
+    padding: 10px 0;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+.directory-content-tabs__tab
+{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+
+    box-sizing: border-box;
+    margin-right: 32px;
+    padding: 10px 0 8px;
+
+    cursor: pointer;
+    transition: .3s; 
+    text-transform: uppercase;
+
+    color: #7f8285;
+    border-bottom: 3px solid transparent;
+}
+.directory-content-tabs__tab:hover
+{
+    color: #000;
+}
+.directory-content-tabs__tab_active
+{
+    box-sizing: border-box; 
+
+    color: #000;
+    border-bottom: 3px solid #ff4f49;
+}
+
+.directory-content-details
+{
+    font-size: 14px;
+    line-height: 20px;
+}
+.directory-content-details_branches .directory-content-details__name
+{
+    width: auto;
+}
+.directory-content-details__item
+{
+    display: flex;
+
+    height: 50px;
+    padding: 0 8px;
+
+    border-bottom: 1px solid #f2f2f2; 
+
+    align-items: center;
+    justify-content: space-between;
+}
+.directory-content-details__item:last-child
+{
+    border-bottom: 0;
+}
+.directory-content-details__item_header
+{
+    font-weight: normal;
+
+    color: #7f8285;
+    border-bottom: 1px solid #e5e5e5;
+}
+.directory-content-details__item_header .directory-content-details__name
+{
+    font-weight: normal;
+}
+.directory-content-details__item_header .directory-content-details__last-commit,
+.directory-content-details__item_header .directory-content-details__commit-hash
+{
+    color: #7f8285;
+}
+.directory-content-details__name,
+.directory-content-details__last-commit,
+.directory-content-details__committer,
+.directory-content-details__commit-message
+{
+    display: flex;
+
+    width: 16.67%;
+
+    align-items: center;
+    justify-content: flex-start;
+}
+.directory-content-details__last-commit
+{
+    cursor: pointer; 
+
+    color: #1774e9;
+}
+.directory-content-details__commit-message
+{
+    width: 33.33%;
+}
+.directory-content-details__date
+{
+    display: flex;
+
+    width: 16.67%;
+
+    justify-content: flex-end;
+}
+.directory-content-details__name
+{
+    font-weight: bold;
+
+    cursor: pointer;
+}
+.directory-content-details__committer span::first-letter
+{
+    color: #ff3029;
+}
+.directory-content-details__commit-hash
+{
+    font-size: 14px;
+    line-height: 20px;
+
+    cursor: pointer; 
+
+    color: #177ffd;
+}
+
+.select-branch
+{
+    position: absolute;
+    top: 100%;
+
+    display: none;
+    flex-direction: column;
+
+    width: 320px;
+    max-height: 360px;
+
+    border-radius: 5px; 
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(53, 73, 93, .2);
+}
+.select-branch__scrolled-container
+{
+    overflow-y: auto;
+
+    height: 100%;
+}
+.select-branch__title
+{
+    position: relative;
+}
+.select-branch__option
+{
+    box-sizing: border-box; 
+    width: 100%;
+    height: 58px;
+    padding: 10px 12px;
+}
+.select-branch__option:hover
+{
+    color: #434445; 
+    background-color: #f4f5f6;
+}
+.select-branch__option:hover .select-branch__name
+{
+    color: #000;
+}
+.select-branch__option:hover .select-branch__last-commit-date
+{
+    color: #434445;
+}
+.select-branch__option_selected
+{
+    position: relative; 
+
+    margin: 4px 0;
+
+    color: #fff;
+    background-color: #4f4f4f;
+}
+.select-branch__option_selected .select-branch__name
+{
+    color: #f2f2f2;
+}
+.select-branch__option_selected .select-branch__last-commit-date
+{
+    color: #e0e0e0;
+}
+.select-branch__option_selected:hover
+{
+    background-color: #4f4f4f;
+}
+.select-branch__option_selected:hover .select-branch__name
+{
+    color: #f2f2f2;
+}
+.select-branch__option_selected:hover .select-branch__last-commit-date
+{
+    color: #e0e0e0;
+}
+.select-branch__option_selected:after
+{
+    position: relative;
+    top: 12px;
+
+    display: block;
+
+    content: '';
+
+    border-bottom: 1px solid #f2f2f2;
+}
+.select-branch__name,
+.select-branch__last-commit-date
+{
+    margin: 0;
+}
+.select-branch__name
+{
+    font-size: 14px;
+    font-weight: bold; 
+    line-height: 20px;
+
+    color: #434445;
+}
+.select-branch__last-commit-date
+{
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #7f8285;
+}
+
+/*MARKDOWN*/
+.markdown
+{
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 20px;
+}
+.markdown__header
+{
+    display: flex;
+
+    box-sizing: border-box; 
+    width: 100%;
+    height: 42px;
+    padding: 0 16px;
+
+    border: 1px solid #e5e5e5;
+    border-bottom: 0;
+    border-radius: 3px 3px 0 0;
+    background: #f5f5f5;
+
+    justify-content: space-between;
+    align-items: center;
+}
+.markdown__title
+{
+    font-size: 14px;
+    font-weight: bold; 
+    line-height: 20px;
+}
+.markdown__content
+{
+    box-sizing: border-box; 
+
+    border: 1px solid #e5e5e5;
+    background: #fff;
+}
+.markdown__content_text
+{
+    padding: 25px 32px;
+}
+.markdown__h1
+{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+
+    margin-top: 0;
+}
+.markdown__paragraph
+{
+    font-size: 14px;
+    line-height: 18px;
+}
+.markdown__file-size
+{
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 20px;
+
+    color: #999;
+}
+.markdown__save-file
+{
+    display: flex;
+
+    box-sizing: border-box;
+    padding: 6px 12px;
+
+    cursor: pointer; 
+
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+    align-items: center;
+}
+.markdown__save-file:hover
+{
+    border-color: #c2c2c2;
+}
+.markdown__letter_M
+{
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #6b69c7;
+}
+.markdown__path
+{
+    font-size: 14px;
+    line-height: 20px;
+
+    word-break: break-all;
+}
+.markdown__value
+{
+    font-weight: bold;
+}
+.markdown__value_plus
+{
+    margin-right: 16px; 
+
+    color: #19bc4d;
+}
+.markdown__value_minus
+{
+    margin-right: 24px; 
+
+    color: #ff3029;
+}
+
+/*COLOR CODE*/
+.code_comment
+{
+    color: #8694a2;
+}
+.code_comment_green
+{
+    color: #008f00;
+}
+
+.code_function
+{
+    color: #005fba;
+}
+
+.code_operator
+{
+    font-weight: bold;
+
+    color: #00234b;
+}
+
+.code_text
+{
+    color: #005fba;
+}
+
+/*COLOR LINE*/
+.line_added
+{
+    background: #e6ffed;
+}
+
+.line_removed
+{
+    background: #ffeef0;
+}
+
+/*FILE-LINE*/
+.file-line
+{
+    font-family: 'Courier New', Courier, monospace;
+}
+.file-line__number
+{
+    font-size: 12px;
+    line-height: 20px;
+
+    padding: 0 30px;
+
+    text-align: right;
+    vertical-align: top;
+
+    color: #999;
+}
+.file-line__code
+{
+    font-size: 12px;
+    line-height: 20px;
+
+    color: #00234b;
+}
+
+/*DIFF*/
+.diff-line
+{
+    font-family: 'Courier New', Courier, monospace; 
+
+    border-collapse: collapse;
+}
+.diff-line *
+{
+    box-sizing: border-box;
+}
+.diff-line__hunk
+{
+    font-family: 'Courier New', Courier, monospace;
+
+    display: inline-block;
+
+    width: 48%;
+    padding: 0 5px;
+
+    text-align: left;
+
+    color: #b8bec3;
+}
+.diff-line__lines
+{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    line-height: 20px;
+
+    display: inline-block;
+
+    width: 48%;
+
+    text-align: left;
+
+    color: #b8bec3;
+}
+.diff-line__lines_active
+{
+    color: #000;
+}
+.diff-line__number
+{
+    font-size: 12px;
+    line-height: 20px;
+
+    width: 75px;
+    padding: 0 30px;
+
+    text-align: right;
+    vertical-align: top;
+
+    color: #999;
+}
+.diff-line__number_second
+{
+    padding-left: 0;
+}
+.diff-line__code
+{
+    font-size: 12px;
+    line-height: 20px;
+
+    width: 100%; 
+
+    vertical-align: top;
+
+    color: #00234b;
+}
+.diff-line .code_comment
+{
+    color: #8694a2;
+}
+.diff-line .code_function
+{
+    color: #005fba;
+}
+.diff-line .code_operator
+{
+    font-weight: bold;
+
+    color: #00234b;
+}
+.diff-line .code_text
+{
+    color: #005fba;
+}
+
+/*HISTORY COMMIT*/
+.history-per-day__date
+{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+
+    margin-bottom: 16px; 
+
+    color: #7f8285;
+}
+
+.commit-info
+{
+    display: flex;
+
+    margin-bottom: 15px; 
+
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.commit-info:last-child .commit-info__image::after
+{
+    content: none;
+}
+.commit-info__name
+{
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+
+    margin-bottom: 3px;
+}
+.commit-info__left-container
+{
+    display: flex;
+}
+.commit-info__image
+{
+    position: relative; 
+
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+
+    background-image: url(./../../images/commit-image.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.commit-info__image::after
+{
+    position: absolute;
+    top: 42px;
+    left: 19px;
+
+    display: block;
+
+    width: 2px;
+    height: 30px;
+
+    content: '';
+
+    border-radius: 10px; 
+    background: #b8bec3;
+}
+.commit-info__main
+{
+    display: flex;
+    flex-direction: column;
+}
+.commit-info__message
+{
+    font-size: 13px;
+    line-height: 18px;
+
+    margin-bottm: 4px;
+}
+.commit-info__hash
+{
+    font-size: 13px;
+    line-height: 18px;
+
+    color: #1774e9;
+}
+.commit-info__footer
+{
+    font-size: 13px;
+    line-height: 20px;
+}
+.commit-info__committer,
+.commit-info__time
+{
+    color: #434445;
+}
+.commit-info__committer::first-letter
+{
+    color: #ff3029;
+}
+.commit-info__tag
+{
+    width: 20px;
+    height: 20px;
+
+    background-image: url(./../../images/tag.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*FOOTER*/
+.footer
+{
+    font-size: 13px;
+    line-height: 18px;
+
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+
+    padding: 18px 20px 14px;
+
+    color: #7f8285; 
+
+    justify-content: space-between;
+}
+.footer__ui-version
+{
+    margin-right: 32px;
+}
+.footer__link
+{
+    text-decoration: none;
+
+    color: #1774e9;
+}
