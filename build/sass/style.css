@@ -17,10 +17,24 @@
     justify-content: flex-start;
     align-items: center;
 }
+@media (max-width: 360px)
+{
+    .header
+    {
+        padding: 0 16px;
+    }
+}
 
 .main-content
 {
     padding: 0 32px;
+}
+@media (max-width: 360px)
+{
+    .main-content
+    {
+        padding: 0;
+    }
 }
 
 .icon
@@ -214,6 +228,39 @@
     content: none;
 }
 
+.directory-info__back-button
+{
+    font-size: 13px;
+    line-height: 15px;
+
+    display: none;
+
+    width: auto;
+
+    color: #7f8285;
+
+    order: 1;
+    align-items: center;
+}
+@media (max-width: 360px)
+{
+    .directory-info__back-button
+    {
+        display: flex;
+    }
+}
+
+@media (max-width: 360px)
+{
+    .directory-info__header
+    {
+        width: 100%;
+        padding-top: 12px; 
+
+        order: 3;
+    }
+}
+
 .directory-info__show-file-button
 {
     font-size: 13px;
@@ -229,6 +276,15 @@
     background: #e6e6e6;
 
     align-items: center;
+}
+@media (max-width: 360px)
+{
+    .directory-info__show-file-button
+    {
+        width: auto; 
+
+        order: 2;
+    }
 }
 
 .directory-info_theme_commit
@@ -249,6 +305,16 @@
 {
     margin-top: 0;
 }
+@media (max-width: 360px)
+{
+    .directory-info_theme_commit
+    {
+        padding: 0 16px;
+
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
 
 .directory-name
 {
@@ -264,6 +330,13 @@
 .directory-name_theme_commit
 {
     margin: 0;
+}
+@media (max-width: 360px)
+{
+    .directory-name_theme_commit
+    {
+        margin-bottom: 10px;
+    }
 }
 .directory-name__main
 {
@@ -290,6 +363,13 @@
     display: flex;
 
     align-items: center;
+}
+@media (max-width: 360px)
+{
+    .directory-name
+    {
+        font-size: 20px;
+    }
 }
 
 .directory-last-commit
@@ -551,6 +631,13 @@
 
     margin-top: 20px;
 }
+@media (max-width: 360px)
+{
+    .markdown
+    {
+        margin-top: 10px;
+    }
+}
 .markdown__header
 {
     display: flex;
@@ -568,11 +655,31 @@
     justify-content: space-between;
     align-items: center;
 }
+@media (max-width: 360px)
+{
+    .markdown__header
+    {
+        flex-direction: column; 
+
+        height: auto;
+    }
+}
 .markdown__title
 {
     font-size: 14px;
     font-weight: bold; 
     line-height: 20px;
+}
+@media (max-width: 360px)
+{
+    .markdown__title
+    {
+        overflow: hidden; 
+
+        width: 100%;
+
+        white-space: nowrap;
+    }
 }
 .markdown__content
 {
@@ -584,6 +691,13 @@
 .markdown__content_text
 {
     padding: 25px 32px;
+}
+@media (max-width: 360px)
+{
+    .markdown__content
+    {
+        overflow-x: scroll;
+    }
 }
 .markdown__h1
 {
@@ -637,6 +751,29 @@
     line-height: 20px;
 
     word-break: break-all;
+}
+@media (max-width: 360px)
+{
+    .markdown__diff-value
+    {
+        display: flex;
+
+        width: 100%;
+
+        justify-content: space-between;
+    }
+}
+@media (max-width: 360px)
+{
+    .markdown__values
+    {
+        font-size: 14px;
+        line-height: 20px;
+
+        display: flex;
+
+        justify-content: space-between;
+    }
 }
 .markdown__value
 {
@@ -729,16 +866,24 @@
 {
     box-sizing: border-box;
 }
+.diff-line_nowrap
+{
+    white-space: nowrap;
+}
+.diff-line__first-line
+{
+    display: flex;
+
+    justify-content: space-between;
+}
 .diff-line__hunk
 {
     font-family: 'Courier New', Courier, monospace;
 
-    display: inline-block;
-
-    width: 48%;
     padding: 0 5px;
 
     text-align: left;
+    white-space: nowrap; 
 
     color: #b8bec3;
 }
@@ -748,11 +893,8 @@
     font-size: 12px;
     line-height: 20px;
 
-    display: inline-block;
-
-    width: 48%;
-
     text-align: left;
+    white-space: nowrap; 
 
     color: #b8bec3;
 }

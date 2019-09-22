@@ -18,10 +18,16 @@ $first-letter-color: #FF3029;
     height: 55px;
     border-bottom: 1px solid $border-color;
     padding: 0 32px;
+    @media (max-width: 360px) {
+        padding: 0 16px;
+    }
 }
 
 .main-content {
     padding: 0 32px;
+    @media (max-width: 360px) {
+        padding: 0;
+    }
 }
 
 .icon {
@@ -168,7 +174,25 @@ $first-letter-color: #FF3029;
 }
 
 .directory-info {
-    &__header {}
+    &__back-button {
+        display: none;
+        width: auto;
+        order: 1;
+        font-size: 13px;
+        line-height: 15px;
+        color: #7F8285;
+        align-items: center;
+        @media (max-width: 360px) {
+            display: flex;
+        }
+    }
+    &__header {
+        @media (max-width: 360px) {
+            order: 3;
+            width: 100%;
+            padding-top: 12px;
+        }
+    }
     &__show-file-button {
         height: 28px;
         display: flex;
@@ -179,6 +203,10 @@ $first-letter-color: #FF3029;
         font-weight: bold;
         font-size: 13px;
         line-height: 15px;
+        @media (max-width: 360px) {
+            order: 2;
+            width: auto;
+        }
     }
     &_theme_commit {
         display: flex;
@@ -192,6 +220,11 @@ $first-letter-color: #FF3029;
         .directory-last-commit {
             margin-top: 0;
         }
+        @media (max-width: 360px) {
+            flex-wrap: wrap;
+            padding: 0 16px;
+            align-items: center;
+        }
     }
 }
 
@@ -203,6 +236,9 @@ $first-letter-color: #FF3029;
     position: relative;
     &_theme_commit {
         margin: 0;
+        @media (max-width: 360px) {
+            margin-bottom: 10px;
+        }
     }
     &__main {
         font-weight: bold;
@@ -220,6 +256,9 @@ $first-letter-color: #FF3029;
     &__branch-name {
         display: flex;
         align-items: center;
+    }
+    @media (max-width: 360px) {
+        font-size: 20px;
     }
 }
 
@@ -421,6 +460,9 @@ $first-letter-color: #FF3029;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    @media (max-width: 360px) {
+        margin-top: 10px;
+    }
     &__header {
         width: 100%;
         height: 42px;
@@ -433,11 +475,20 @@ $first-letter-color: #FF3029;
         border-bottom: 0;
         border-radius: 3px 3px 0 0;
         box-sizing: border-box;
+        @media (max-width: 360px) {
+            height: auto;
+            flex-direction: column;
+        }
     }
     &__title {
         font-size: 14px;
         line-height: 20px;
         font-weight: bold;
+        @media (max-width: 360px) {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+        }
     }
     &__content {
         background: #FFFFFF;
@@ -447,6 +498,9 @@ $first-letter-color: #FF3029;
             padding: 25px 32px;
         }
         &_table {}
+        @media (max-width: 360px) {
+            overflow-x: scroll
+        }
     }
     &__h1 {
         font-size: 20px;
@@ -487,6 +541,21 @@ $first-letter-color: #FF3029;
         font-size: 14px;
         line-height: 20px;
         word-break: break-all;
+    }
+    &__diff-value {
+        @media (max-width: 360px) {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__values {
+        @media (max-width: 360px) {
+            font-size: 14px;
+            line-height: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
     }
     &__value {
         font-weight: bold;
@@ -564,22 +633,27 @@ $first-letter-color: #FF3029;
     * {
         box-sizing: border-box;
     }
+    &_nowrap {
+        white-space: nowrap;
+    }
+    &__first-line {
+        display: flex;
+        justify-content: space-between;
+    }
     &__hunk {
         font-family: 'Courier New', Courier, monospace;
-        display: inline-block;
-        width: 48%;
         padding: 0 5px;
         text-align: left;
         color: #B8BEC3;
+        white-space: nowrap;
     }
     &__lines {
         font-family: 'Courier New', Courier, monospace;
-        display: inline-block;
-        width: 48%;
         text-align: left;
         font-size: 12px;
         line-height: 20px;
         color: #B8BEC3;
+        white-space: nowrap;
         &_active {
             color: #000000;
         }
