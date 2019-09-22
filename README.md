@@ -18,9 +18,9 @@
 #### Страницы для экранов с разрешением 360px: 
   3.2 Страница коммита. Вариант с горизонтальным скроллом => 3.1 - commit.html  
   
-  Менее сверстанные страницы:
-  1.1 Список файлов в корне репозитория => 1.1-1.4 - repository-content.html  
-  1.2 Выбор репозитория => 1.1-1.4 - repository-content.html   
-  1.3 Выбор ветки => 1.1-1.4 - repository-content.html   
-  1.4 Навигация по папкам + файл README => 1.1-1.4 - repository-content.html  
+  Менее сверстанные страницы:  
+  1.1 Список файлов в корне репозитория => 1.1-1.4 - repository-content.html    
+  1.2 Выбор репозитория => 1.1-1.4 - repository-content.html     
+  1.3 Выбор ветки => 1.1-1.4 - repository-content.html     
+  1.4 Навигация по папкам + файл README => 1.1-1.4 - repository-content.html    
 
