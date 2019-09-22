@@ -36,6 +36,13 @@
         padding: 0;
     }
 }
+@media (max-width: 360px)
+{
+    .main-content_repository .directory-content
+    {
+        padding: 0 16px;
+    }
+}
 
 .icon
 {
@@ -199,6 +206,7 @@
 
     border-bottom: 1px solid #e5e5e5;
 
+    flex-wrap: wrap;
     align-items: center;
 }
 .breadcrumbs__link
@@ -447,6 +455,36 @@
     align-items: center;
     justify-content: space-between;
 }
+@media (max-width: 360px)
+{
+    .directory-content-details__item
+    {
+        position: relative;
+
+        height: auto;
+        padding: 12px 0;
+
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .directory-content-details__item::after
+    {
+        position: absolute;
+        top: 50%;
+        right: 0;
+
+        width: 9px;
+        height: 21px;
+        margin-top: -11px;
+
+        content: '';
+        transform: rotate(180deg);
+
+        background-image: url(./../../images/icon-arrow-right.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
 .directory-content-details__item:last-child
 {
     border-bottom: 0;
@@ -457,6 +495,13 @@
 
     color: #7f8285;
     border-bottom: 1px solid #e5e5e5;
+}
+@media (max-width: 360px)
+{
+    .directory-content-details__item_header
+    {
+        display: none;
+    }
 }
 .directory-content-details__item_header .directory-content-details__name
 {
@@ -485,9 +530,29 @@
 
     color: #1774e9;
 }
+@media (max-width: 360px)
+{
+    .directory-content-details__last-commit
+    {
+        width: auto;
+        margin-right: 10px; 
+
+        order: 3;
+    }
+}
 .directory-content-details__commit-message
 {
     width: 33.33%;
+}
+@media (max-width: 360px)
+{
+    .directory-content-details__commit-message
+    {
+        width: 100%;
+        margin-bottom: 10px; 
+
+        order: 2;
+    }
 }
 .directory-content-details__date
 {
@@ -497,15 +562,55 @@
 
     justify-content: flex-end;
 }
+@media (max-width: 360px)
+{
+    .directory-content-details__date
+    {
+        width: auto; 
+
+        order: 5;
+    }
+}
 .directory-content-details__name
 {
     font-weight: bold;
 
     cursor: pointer;
 }
+@media (max-width: 360px)
+{
+    .directory-content-details__name
+    {
+        width: 100%;
+        margin-bottom: 10px; 
+
+        order: 1;
+    }
+}
 .directory-content-details__committer span::first-letter
 {
     color: #ff3029;
+}
+@media (max-width: 360px)
+{
+    .directory-content-details__committer
+    {
+        width: auto; 
+
+        order: 4;
+    }
+    .directory-content-details__committer::before
+    {
+        margin-right: 5px; 
+
+        content: 'by';
+    }
+    .directory-content-details__committer::after
+    {
+        margin-right: 5px; 
+
+        content: ',';
+    }
 }
 .directory-content-details__commit-hash
 {
@@ -520,6 +625,7 @@
 .select-branch
 {
     position: absolute;
+    z-index: 99;
     top: 100%;
 
     display: none;

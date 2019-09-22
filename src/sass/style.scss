@@ -28,6 +28,13 @@ $first-letter-color: #FF3029;
     @media (max-width: 360px) {
         padding: 0;
     }
+    &_repository {
+        @media (max-width: 360px) {
+            .directory-content {
+                padding: 0 16px;
+            }
+        }
+    }
 }
 
 .icon {
@@ -148,6 +155,7 @@ $first-letter-color: #FF3029;
 
 .breadcrumbs {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding: 10px 0;
     border-bottom: 1px solid $border-semigrey-color;
@@ -320,6 +328,26 @@ $first-letter-color: #FF3029;
         height: 50px;
         padding: 0 8px;
         border-bottom: 1px solid $border-lightgrey-color;
+        @media (max-width: 360px) {
+            height: auto;
+            padding: 12px 0;
+            flex-wrap: wrap;
+            position: relative;
+            justify-content: flex-start;
+            &::after {
+                content: '';
+                width: 9px;
+                height: 21px;
+                position: absolute;
+                top: 50%;
+                margin-top: -11px;
+                right: 0;
+                background-image: url(./../../images/icon-arrow-right.svg);
+                transform: rotate(180deg);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
         &:last-child {
             border-bottom: 0;
         }
@@ -327,6 +355,9 @@ $first-letter-color: #FF3029;
             font-weight: normal;
             color: $main-grey-color;
             border-bottom: 1px solid $border-semigrey-color;
+            @media (max-width: 360px) {
+                display: none;
+            }
             .directory-content-details__name {
                 font-weight: normal;
             }
@@ -348,22 +379,53 @@ $first-letter-color: #FF3029;
     &__last-commit {
         color: $main-blue-color;
         cursor: pointer;
+        @media (max-width: 360px) {
+            order: 3;
+            width: auto;
+            margin-right: 10px;
+        }
     }
     &__commit-message {
         width: 33.33%;
+        @media (max-width: 360px) {
+            width: 100%;
+            order: 2;
+            margin-bottom: 10px;
+        }
     }
     &__date {
         width: 16.67%;
         display: flex;
         justify-content: flex-end;
+        @media (max-width: 360px) {
+            order: 5;
+            width: auto;
+        }
     }
     &__name {
         font-weight: bold;
         cursor: pointer;
+        @media (max-width: 360px) {
+            width: 100%;
+            order: 1;
+            margin-bottom: 10px;
+        }
     }
     &__committer {
         & span::first-letter {
             color: $first-letter-color;
+        }
+        @media (max-width: 360px) {
+            order: 4;
+            width: auto;
+            &::before {
+                content: 'by';
+                margin-right: 5px;
+            }
+            &::after {
+                content: ',';
+                margin-right: 5px;
+            }
         }
     }
     &__commit-hash {
@@ -378,7 +440,7 @@ $first-letter-color: #FF3029;
     display: none;
     position: absolute;
     top: 100%;
-    // display: flex;
+    z-index: 99;
     flex-direction: column;
     width: 320px;
     max-height: 360px;
