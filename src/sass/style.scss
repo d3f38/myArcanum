@@ -161,6 +161,9 @@ $first-letter-color: #FF3029;
     border-bottom: 1px solid $border-semigrey-color;
     font-size: 14px;
     line-height: 20px;
+    @media (max-width: 360px) {
+        padding: 10px 16px;
+    }
     &__link {
         color: $main-grey-color;
         text-decoration: none;
@@ -182,6 +185,9 @@ $first-letter-color: #FF3029;
 }
 
 .directory-info {
+    @media (max-width: 360px) {
+        padding: 0 16px;
+    }
     &__back-button {
         display: none;
         width: auto;
@@ -540,6 +546,10 @@ $first-letter-color: #FF3029;
         @media (max-width: 360px) {
             height: auto;
             flex-direction: column;
+            border-radius: 0;
+            padding: 13px 16px;
+            border-left: 0;
+            border-right: 0;
         }
     }
     &__title {
@@ -557,11 +567,20 @@ $first-letter-color: #FF3029;
         border: 1px solid #E5E5E5;
         box-sizing: border-box;
         &_text {
+            overflow: visible;
             padding: 25px 32px;
+            @media (max-width: 360px) {
+                padding: 25px;
+            }
         }
-        &_table {}
+        &_table {
+            @media (max-width: 360px) {
+                overflow-x: scroll
+            }
+        }
         @media (max-width: 360px) {
-            overflow-x: scroll
+            border-left: 0;
+            border-right: 0;
         }
     }
     &__h1 {
@@ -573,6 +592,7 @@ $first-letter-color: #FF3029;
     &__paragraph {
         font-size: 14px;
         line-height: 18px;
+        word-break: break-word;
     }
     &__file-size {
         font-size: 13px;
