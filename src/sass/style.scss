@@ -780,6 +780,7 @@ $first-letter-color: #FF3029;
 /*HISTORY COMMIT*/
 
 .history-per-day {
+    padding-top: 15px;
     &__date {
         font-size: 16px;
         line-height: 20px;
@@ -793,7 +794,6 @@ $first-letter-color: #FF3029;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 15px;
     &:last-child &__image::after {
         content: none;
     }

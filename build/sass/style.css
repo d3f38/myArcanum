@@ -1095,6 +1095,10 @@
 }
 
 /*HISTORY COMMIT*/
+.history-per-day
+{
+    padding-top: 15px;
+}
 .history-per-day__date
 {
     font-size: 16px;
@@ -1109,8 +1113,6 @@
 .commit-info
 {
     display: flex;
-
-    margin-bottom: 15px; 
 
     justify-content: space-between;
     align-items: flex-start;
