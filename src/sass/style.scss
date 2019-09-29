@@ -23,6 +23,35 @@ $first-letter-color: #FF3029;
     }
 }
 
+.search {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    &__input {
+        outline: none;
+        padding: 5px 10px;
+        border: 1px solid #000;
+        border-radius: 3px;
+        box-shadow: none;
+    }
+    &__button {
+        outline: none;
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-left: 10px;
+        padding: 5px 15px;
+        background-color: #FFF;
+        box-shadow: none;
+        border: 1px solid $border-lightgrey-color;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: .3s;
+        &:hover {
+            border: 1px solid #000;
+        }
+    }
+}
+
 .main-content {
     padding: 0 32px;
     @media (max-width: 360px) {

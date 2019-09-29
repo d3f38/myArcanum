@@ -25,6 +25,45 @@
     }
 }
 
+.search
+{
+    display: flex;
+
+    padding: 0 20px;
+
+    align-items: center;
+}
+.search__input
+{
+    padding: 5px 10px;
+
+    border: 1px solid #000;
+    border-radius: 3px;
+    outline: none;
+    box-shadow: none;
+}
+.search__button
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+
+    margin-left: 10px;
+    padding: 5px 15px;
+
+    cursor: pointer;
+    transition: .3s; 
+
+    border: 1px solid #f2f2f2;
+    border-radius: 3px;
+    outline: none;
+    background-color: #fff;
+    box-shadow: none;
+}
+.search__button:hover
+{
+    border: 1px solid #000;
+}
+
 .main-content
 {
     padding: 0 32px;
