@@ -1,10 +1,4 @@
 const SEARCH_FILE = 'SEARCH_FILE';
-const SET_VISIBILITY_FILE = 'SET_VISIBILITY_FILE';
-const INPUT_SEARCH = 'INPUT_SEARCH';
-
-/*
- * генераторы действий
- */
 
 const initState = {
     "inputSearch": '',
@@ -92,23 +86,21 @@ class View {
         this.unsubscribe = store.subscribe(
             this._prepareRender.bind(this)
         );
-        this._prepareRender(store.getState());
+        this._prepareRender();
     }
 
-    _prepareRender(state) {
-
-        this.render(state);
-
+    _prepareRender() {
+        this.render();
     }
 
-    render(state) {
+    render() {
         const fileBlocks = [].slice.call(this._el);
+        const state = store.getState();
 
         fileBlocks.forEach(element => {
             const fileName = element.querySelector('.directory-content-details__name').textContent.trim();
-            const currentState = this._store.getState();
 
-            if (!currentState.visibleFiles[fileName]) {
+            if (!state.visibleFiles[fileName]) {
                 element.style.display = 'none';
             } else {
                 element.style.display = 'flex';
@@ -121,13 +113,14 @@ class View {
 
 const files = document.querySelectorAll('.directory-content-details__item');
 
-
-let store = new Store(search, initState);
-let view = new View(files, store);
+const store = new Store(search, initState);
+const view = new View(files, store);
 
 document.querySelector('.search__button').addEventListener('click', () => {
     const searchValue = document.querySelector('#search-input').value;
+
     store.dispatch(searchFile(searchValue))
     view.render();
 
+    console.log(store)
 })

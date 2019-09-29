@@ -13,12 +13,6 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 var SEARCH_FILE = 'SEARCH_FILE';
-var SET_VISIBILITY_FILE = 'SET_VISIBILITY_FILE';
-var INPUT_SEARCH = 'INPUT_SEARCH';
-/*
- * генераторы действий
- */
-
 var initState = {
   "inputSearch": '',
   "visibleFiles": {
@@ -131,26 +125,23 @@ function () {
     this._store = store;
     this.unsubscribe = store.subscribe(this._prepareRender.bind(this));
 
-    this._prepareRender(store.getState());
+    this._prepareRender();
   }
 
   _createClass(View, [{
     key: "_prepareRender",
-    value: function _prepareRender(state) {
-      this.render(state);
+    value: function _prepareRender() {
+      this.render();
     }
   }, {
     key: "render",
-    value: function render(state) {
-      var _this3 = this;
-
+    value: function render() {
       var fileBlocks = [].slice.call(this._el);
+      var state = store.getState();
       fileBlocks.forEach(function (element) {
         var fileName = element.querySelector('.directory-content-details__name').textContent.trim();
 
-        var currentState = _this3._store.getState();
-
-        if (!currentState.visibleFiles[fileName]) {
+        if (!state.visibleFiles[fileName]) {
           element.style.display = 'none';
         } else {
           element.style.display = 'flex';
@@ -169,4 +160,5 @@ document.querySelector('.search__button').addEventListener('click', function () 
   var searchValue = document.querySelector('#search-input').value;
   store.dispatch(searchFile(searchValue));
   view.render();
+  console.log(store);
 });
