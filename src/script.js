@@ -1,23 +1,47 @@
-window.onload = () => {
-    document.body.addEventListener('click', event => {
-        const containClass = selector => event.target.classList.contains(selector);
-        
-        if (containClass('onoffswitch') || containClass('onoffswitch__button')) {
-            const blocksWithTheme = [...document.querySelectorAll('.theme_color_project-default, .theme_color_project-inverse')];
-    
-            document.querySelector('.onoffswitch__button').classList.toggle('onoffswitch__button_active');
-            blocksWithTheme.forEach(block => {
-                block.classList.toggle('theme_color_project-inverse');
-                block.classList.toggle('theme_color_project-default');
-            });
-        }
-    
-        const blocksFromHistory = [...document.querySelectorAll('.history__transaction, .history__transaction div')];
-    
-        if (blocksFromHistory.includes(event.target)) {
-            const historyTransaction = event.target.closest('.history__transaction');
-            const historyHidden = historyTransaction.querySelector('.history__hide');
-            historyHidden.classList.toggle('history__hide_visible');
-        }
-    });
+function square(n) {
+    return (Array.isArray(collection)) ? 
+        collection.map(fn) : 
+        _.map(collection, fn);
 }
+
+[4, 8].map(square);
+// => [16, 64]
+
+function square2(n) {
+    return ['hi', 'hello', 'aloha'].map(fn);
+}
+
+function square3(n) {
+    return (Array.isArray(kakoiToArray)) ? 
+        kakoiToArray.map(fn) : 
+        _.map(kakoiToArray, fn);
+}
+var kakoiToArray = ['q', 'w'];
+
+function square4(n) {
+    return kakoiToArray.map(fn);
+}
+
+
+function square5(n) {
+    return (Array.isArray(fn)) ?
+        fn.map(POP) :
+        _.map(fn, POP);
+}
+
+
+_.map({
+    'a': 4,
+    'b': 8
+}, square);
+
+var users = [{
+        'user': 'barney'
+    },
+    {
+        'user': 'fred'
+    }
+];
+
+
+users.map('user');

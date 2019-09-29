@@ -4,7 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "./node_modules/.bin/gulp"
+        "start": "./node_modules/.bin/gulp",
+        "test": "eslint --fix src",
+        "testfix": "eslint --fix src"
     },
     "author": "abylkov",
     "license": "ISC",
@@ -19,6 +21,8 @@
         "@babel/core": "^7.4.3",
         "@babel/preset-env": "^7.4.3",
         "browser-sync": "^2.26.3",
+        "eslint": "^6.4.0",
+        "eslint-plugin-local-rules": "^0.1.1",
         "gulp": "^4.0.0",
         "gulp-autoprefixer": "^6.0.0",
         "gulp-babel": "^8.0.0",
