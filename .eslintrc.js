@@ -12,9 +12,10 @@ module.exports = {
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
-    "plugins": ['eslint-plugin-local-rules'],
+    "plugins": [
+        "lodash-to-native"
+    ],
     "rules": {
-        // ... другие правила
-        'local-rules/map': 'error' // Наше будущее правило
+        "lodash-to-native/map": "warn"
     }
 };
